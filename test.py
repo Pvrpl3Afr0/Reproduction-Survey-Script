@@ -58,11 +58,30 @@ else:
 asia = ["Afghanistan", "Azerbaijan", "Armenia", "Bahrain", "Bangladesh", "Bhutan", "Brunei", "Cambodia", "China", "Cyprus"]
 asia2 = ["Georgia", "India", "Indonesia", "Iran", "Iraq", "Israel", "Japan", "Jordan", "Kazakhstan", "Kuwait"]
 asia3 = ["Kyrgyzstan", "Laos", "Lebanon","Malaysia", "Maldives", "Mongolia", "Myanmar", "Burma", "Nepal", "North Korea"]
-asia4 = ["Oman", "Pakistan", "Palestine", "Philippines", "Qatar", "Russia", "Saudi Araia", "Singapore", "South Korea", "Sri Lanka"]
+asia4 = ["Oman", "Pakistan", "Palestine", "Philippines", "Qatar", "Russia", "Saudi Arabia", "Singapore", "South Korea", "Sri Lanka"]
 asia5 = ["Syria", "Taiwan", "Tajikistan", "Thailand", "Timor-Leste", "Turkey", "Turkmenistan", "United Arab Emirates", "Uzbekistan", "Vietnam", "Yemen"]
+na = ["United States,", "Canada", "Mexico"]
+sa = ["Honduras", "Brazil", "Dominican Republic", "Haiti", "Cuba"]
+eu = ["England", "Germany", "Spain", "France", "Ireland", "Sweden"]
+af = ["Egypt", "South Africa", "Morocco", "Congo", "Madagascar"]
+au = ["New Zealand", "Fiji", "Guam", "Papua New Guinea", "Marshall Islands"]
 countryChoice = input("Which country in your chosen continent would you like to learn about?:")
 info = False
 while not info:
     print("So you chose", countryChoice, "cool!")
     if countryChoice == asia[0] or countryChoice == asia[4] or countryChoice == asia[6] or countryChoice == asia3[6] or countryChoice == asia4[3] or countryChoice == asia4[9] or countryChoice == asia5[4]:
+        print(womanslife)
         info = True
+    elif countryChoice == au[4] or countryChoice == au[3] or countryChoice == af[0] or countryChoice == eu[4] or countryChoice == sa[3] or countryChoice == sa[4]:
+        print(womanslife)
+        info = True
+    elif countryChoice == af[4] or countryChoice == af[3] or countryChoice == asia5[4]:
+        print(womanslife)
+        info = True
+    elif countryChoice == asia3[4]:
+        print(physhealth)
+        info = True
+    elif countryChoice == asia3[3]:
+        print(mental)
+        info = True
+    elif countryChoice == 

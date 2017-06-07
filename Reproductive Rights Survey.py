@@ -53,5 +53,5 @@ asia3 = ["Kyrgyzstan", "Laos", "Lebanon","Malaysia", "Maldives", "Mongolia", "My
 asia4 = ["Oman", "Pakistan", "Palestine", "Philippines", "Qatar", "Russia", "Saudi Araia", "Singapore", "South Korea", "Sri Lanka"]
 asia5 = ["Syria", "Taiwan", "Tajikistan", "Thailand", "Timor-Leste", "Turkey", "Turkmenistan", "United Arab Emirates", "Uzbekistan", "Vietnam", "Yemen"]
 countryChoice = input("Which country in your chosen continent would you like to learn about?:")
-if countryChoice == asia[x]:
-    print("So you chose", asia[x])
+if countryChoice == asia[]:
+    print("So you chose", asia[])
