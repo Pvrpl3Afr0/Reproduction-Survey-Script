@@ -1,6 +1,14 @@
 import random #I'm thinking I'll need random lib for some rng
-import time #Might need this?
-import pygame #Considering using a graphical interface with pygame, not required#
+import time #DEF Need this!!!
+
+womanslife = "According to the Pew Research Center, this country only offers abortions to a woman who's life in in danger"
+physhealth = "is a country that also offers abortion for a woman's physical health"
+mental = "Interestingly, this country offers abortions for the sake of a woman's mental health too."
+assault = "offers legal abortions in cases of rape or incest, thankfully."
+impairment = "offers abortions if there is fetal impairment"
+socioeco = "This country offers legal abortions based on social / economic reasons"
+request = ""
+
 
 countryIndex = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan",
 "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia" "Bosnia and Herzegovina,", "Botswana,", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burma", "Burundi",
@@ -22,12 +30,21 @@ countryIndex = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antig
 continentIndex = ["Africa", "Antarctica", "Asia", "Australia", "Europe", "North America", "South America"]
 #Instead of doing this Just make one big multi line List because this is bad
 print("Welcome to our Reproductive Rights Survey, made by Marcus Wong and Henry Ramos!")
+time.sleep(2)
 print("Here, we will ask you a variety of questions in order to inform you about Women's Reproductive Rights around the world.")
+
+print("NOTICE: A majority of our data originates from the Pew Research Center.")
+time.sleep(2)
+print("We also have extensive data on Honduras thanks to another source.")
 
 
 username = input("First, let's start with your name: ")
 print("Nice to meet you," , username)
+time.sleep(2)
 print("Okay, so now we'll pick a continent. Please be sure to capitalize the name! I.E Asia instead of asia.")
+time.sleep(2)
+print("Not sure what continet to pick? Some options include North/South America, Europe, Asia and Australia!")
+time.sleep(2)
 continentChoice = input("What continent is the country in? If you don't know, pick any!:  ")
 
 
@@ -50,8 +67,80 @@ else:
 asia = ["Afghanistan", "Azerbaijan", "Armenia", "Bahrain", "Bangladesh", "Bhutan", "Brunei", "Cambodia", "China", "Cyprus"]
 asia2 = ["Georgia", "India", "Indonesia", "Iran", "Iraq", "Israel", "Japan", "Jordan", "Kazakhstan", "Kuwait"]
 asia3 = ["Kyrgyzstan", "Laos", "Lebanon","Malaysia", "Maldives", "Mongolia", "Myanmar", "Burma", "Nepal", "North Korea"]
-asia4 = ["Oman", "Pakistan", "Palestine", "Philippines", "Qatar", "Russia", "Saudi Araia", "Singapore", "South Korea", "Sri Lanka"]
+asia4 = ["Oman", "Pakistan", "Palestine", "Philippines", "Qatar", "Russia", "Saudi Arabia", "Singapore", "South Korea", "Sri Lanka"]
 asia5 = ["Syria", "Taiwan", "Tajikistan", "Thailand", "Timor-Leste", "Turkey", "Turkmenistan", "United Arab Emirates", "Uzbekistan", "Vietnam", "Yemen"]
+na = ["United States,", "Canada", "Mexico"]
+sa = ["Honduras", "Brazil", "Dominican Republic", "Haiti", "Cuba"]
+eu = ["England", "Germany", "Spain", "France", "Ireland", "Sweden", "Poland"]
+af = ["Egypt", "South Africa", "Morocco", "Congo", "Madagascar"]
+au = ["New Zealand", "Fiji", "Guam", "Papua New Guinea", "Marshall Islands"]
+print("Some of the countries you can pick are as follows:")
+time.sleep(1)
+print("For North American Countries, we have three to offer, those three are:")
+print(na)
+time.sleep(1)
+print("For Europe, we have:", eu)
+time.sleep(1)
+print("We also have data on some African countries, you should try: ", af)
 countryChoice = input("Which country in your chosen continent would you like to learn about?:")
-if countryChoice == asia[]:
-    print("So you chose", asia[])
+info = False
+while not info:
+    print("So you chose", countryChoice, "cool!")
+    if countryChoice == "":
+        print("Make sure you input something! Otherwise the code will run into an error.")
+        info = True
+    elif countryChoice == asia[0] or countryChoice == asia[4] or countryChoice == asia[6] or countryChoice == asia3[6] or countryChoice == asia4[3] or countryChoice == asia4[9] or countryChoice == asia5[4]:
+        print(womanslife)
+        time.sleep(3)
+        info = True
+    elif countryChoice == au[4] or countryChoice == au[3] or countryChoice == af[0] or countryChoice == eu[4] or countryChoice == sa[3] or countryChoice == sa[4]:
+        print(womanslife)
+        time.sleep(3)
+        info = True
+    elif countryChoice == af[4] or countryChoice == af[3] or countryChoice == asia5[4] or countryChoice == sa[0]:
+        print(womanslife)
+        time.sleep(3)
+        info = True
+    elif countryChoice == asia3[4]:
+        print(countryChoice, physhealth)
+        time.sleep(3)
+        info = True
+    elif countryChoice == asia3[3]:
+        print(mental)
+        time.sleep(3)
+        info = True
+    elif countryChoice == sa[1] or countryChoice == asia[5] or countryChoice == asia2[2] or countryChoice == asia4[0]:
+        print(countryChoice, assault)
+        time.sleep(3)
+        info = True
+    elif countryChoice == asia[9] or countryChoice == au[0] or countryChoice == asia4[8] or countryChoice == asia5[3] or countryChoice == eu[6] or countryChoice == asia2[7]:
+        print(countryChoice, impairment)
+        time.sleep(3)
+        info = True
+    elif countryChoice == au[1] or countryChoice == asia2[1] or countryChoice == asia2[6] or countryChoice == eu[0]:
+        print(socioeco)
+        time.sleep(3)
+        info = True
+    else:
+        time.sleep(2)
+        print("If you're seeing this message, it means one of two things. Either:")
+        time.sleep(2)
+        print("The country you input has all aforementioned Reproductive Rights! Everything from saving a woman's life to being purely out of request.")
+        time.sleep(3)
+        print("OR")
+        print("It's possible that the country you input isn't in our index, meaning that we don't have data on it")
+        correct = input("Can you verify that this country is what you wanted, and that it's spelled correctly? If you're not sure, call us over!: ")
+        if correct == "yes" or correct == "Yes":
+            print("Perfect! What this means is that this country has either all aforementioned rights, or simply that they're one of the 58 of 196 countries that allow abortions upon request.")
+            time.sleep(4)
+            info = True
+        elif correct == "no" or "No":
+            print("If you answered no and this country isn't in our index, that means that unfortunately we weren't able to get the required information in time")
+            info = False
+        else:
+            print("Make sure you input either yes or No!")
+if info == True:
+    time.sleep(3)
+    print("Thank you for taking our informational program", username, "! Hopefully you learned a valuable piece of information regaurding a country of your choice.")
+    time.sleep(5)
+    print("If you'd like to go again, simply let either Marcus or Henry know. Thanks again!")

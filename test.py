@@ -7,7 +7,7 @@ mental = "Interestingly, this country offers abortions for the sake of a woman's
 assault = "offers legal abortions in cases of rape or incest, thankfully."
 impairment = "offers abortions if there is fetal impairment"
 socioeco = "This country offers legal abortions based on social / economic reasons"
-request = "is one of the few countries that offers legal abortions on request"
+request = ""
 
 
 countryIndex = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan",
@@ -62,14 +62,17 @@ asia4 = ["Oman", "Pakistan", "Palestine", "Philippines", "Qatar", "Russia", "Sau
 asia5 = ["Syria", "Taiwan", "Tajikistan", "Thailand", "Timor-Leste", "Turkey", "Turkmenistan", "United Arab Emirates", "Uzbekistan", "Vietnam", "Yemen"]
 na = ["United States,", "Canada", "Mexico"]
 sa = ["Honduras", "Brazil", "Dominican Republic", "Haiti", "Cuba"]
-eu = ["England", "Germany", "Spain", "France", "Ireland", "Sweden"]
+eu = ["England", "Germany", "Spain", "France", "Ireland", "Sweden", "Poland"]
 af = ["Egypt", "South Africa", "Morocco", "Congo", "Madagascar"]
 au = ["New Zealand", "Fiji", "Guam", "Papua New Guinea", "Marshall Islands"]
 countryChoice = input("Which country in your chosen continent would you like to learn about?:")
 info = False
 while not info:
     print("So you chose", countryChoice, "cool!")
-    if countryChoice == asia[0] or countryChoice == asia[4] or countryChoice == asia[6] or countryChoice == asia3[6] or countryChoice == asia4[3] or countryChoice == asia4[9] or countryChoice == asia5[4]:
+    if countryChoice == "":
+        print("Make sure you input something! Otherwise the code will run into an error.")
+        info = True
+    elif countryChoice == asia[0] or countryChoice == asia[4] or countryChoice == asia[6] or countryChoice == asia3[6] or countryChoice == asia4[3] or countryChoice == asia4[9] or countryChoice == asia5[4]:
         print(womanslife)
         info = True
     elif countryChoice == au[4] or countryChoice == au[3] or countryChoice == af[0] or countryChoice == eu[4] or countryChoice == sa[3] or countryChoice == sa[4]:
@@ -84,4 +87,32 @@ while not info:
     elif countryChoice == asia3[3]:
         print(mental)
         info = True
-    elif countryChoice == 
+    elif countryChoice == sa[1] or countryChoice == asia[5] or countryChoice == asia2[2] or countryChoice == asia4[0]:
+        print(countryChoice, assault)
+        info = True
+    elif countryChoice == asia[9] or countryChoice == au[0] or countryChoice == asia4[8] or countryChoice == asia5[3] or countryChoice == eu[6] or countryChoice == asia2[7]:
+        print(impairment)
+        info = True
+    elif countryChoice == au[1] or countryChoice == asia2[1] or countryChoice == asia2[6] or countryChoice == eu[0]:
+        print(socioeco)
+        info = True
+    else:
+        time.sleep(2)
+        print("If you're seeing this message, it means one of two things. Either:")
+        time.sleep(2)
+        print("The country you input has all aforementioned Reproductive Rights! Everything from saving a woman's life to being purely out of request.")
+        time.sleep(3)
+        print("OR")
+        print("It's possible that the country you input isn't in our index, meaning that we don't have data on it")
+        correct = input("Can you verify that this country is what you wanted, and that it's spelled correctly? If you're not sure, call us over!: ")
+        if correct == "yes" or correct == "Yes":
+            print("Perfect! What this means is that this country has either all aforementioned rights, or simply that they're one of the 58 of 196 countries that allow abortions upon request.")
+            info = True
+        elif correct == "no" or "No":
+            print("If you answered no and this country isn't in our index, that means that unfortunately we weren't able to get the required information in time")
+            info = False
+        else:
+            print("Make sure you input either yes or No!")
+print("Thank you for taking our informational program, hopefully you learned a valuable piece of information regaurding a country of your choice.")
+time.sleep(5)
+print("If you'd like to go again, simply let either Marcus or Henry know. Thanks again!")
